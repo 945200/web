@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 1 - HTML & CSS</title>
+    <style>
+        /* تنسيقات عامة */
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        /* ===== العناوين في وسط الصفحة ===== */
+        h1 {
+            color: black;
+            font-size: 32px;
+            margin-bottom: 5px;
+            text-align: center;  /* توسيط العنوان الرئيسي */
+        }
+
+        h2 {
+            color: red;
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: normal;
+            text-align: center;  /* توسيط العنوان الفرعي */
+        }
+
+        /* حاوية مرنة للمعلومات والصورة */
+        .content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        /* قسم المعلومات */
+        .info-section {
+            flex: 1;
+        }
+
+        /* قسم الصورة */
+        .image-section {
+            flex: 1;
+            text-align: center;
+        }
+
+        /* العناوين (Labels) باللون الأخضر، حجم 16px، خط Cambria */
+        .label {
+            color: green;
+            font-size: 16px;
+            font-family: 'Cambria', 'Times New Roman', serif;
+            font-weight: bold;
+            display: inline-block;
+            width: 100px;
+        }
+
+        /* الإجابات باللون الأسود، حجم 14px */
+        .answer {
+            color: black;
+            font-size: 14px;
+        }
+
+        /* تنسيق الفقرات */
+        p {
+            margin: 12px 0;
+        }
+
+        /* تنسيق الصورة */
+        img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* للشاشات الصغيرة (الجوال) */
+        @media (max-width: 600px) {
+            .content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- العنوانين في الوسط -->
+    <h1>Welcome to my web site</h1>
+    <h2>Web Development (Lab1)</h2>
+
+    <!-- باقي الصفحة كما هي - لم يتغير شيء -->
+    <div class="content">
+        <!-- قسم المعلومات على اليسار -->
+        <div class="info-section">
+            <p><span class="label">Full name:</span> <span class="answer">أحمد</span></p>
+            <p><span class="label">Age:</span> <span class="answer">20 سنة</span></p>
+            <p><span class="label">Class:</span> <span class="answer">ثانية جامعي</span></p>
+            <p><span class="label">University:</span> <span class="answer">جامعة الشهيد حمى لخضر</span></p>
+        </div>
+
+        <!-- قسم الصورة على اليمين -->
+        <div class="image-section">
+            <img src="https://www.w3schools.com/w3images/avatar2.png" alt="صورة شخصية"width="250"height="250">
+        </div>
+    </div>
+</body>
+</html>
