@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة المعدل التراكمي - المرحلة 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 حاسبة المعدل التراكمي</h1>
+        <p class="subtitle">أدخل موادك الدراسية لحساب المعدل التراكمي</p>
+        
+        <form action="calculate.php" method="post" onsubmit="return validateForm();">
+            <div id="courses">
+                <div class="course-row">
+                    <div class="field-group">
+                        <label>📚 اسم المادة:</label>
+                        <input type="text" name="course[]" placeholder="مثال: رياضيات" required>
+                    </div>
+                    <div class="field-group">
+                        <label>⏱️ عدد الساعات:</label>
+                        <input type="number" name="credits[]" placeholder="مثال: 3" min="1" step="1" required>
+                    </div>
+                    <div class="field-group">
+                        <label>🎓 الدرجة:</label>
+                        <select name="grade[]">
+                            <option value="4.0">A (ممتاز - 4.0)</option>
+                            <option value="3.0">B (جيد جداً - 3.0)</option>
+                            <option value="2.0">C (جيد - 2.0)</option>
+                            <option value="1.0">D (مقبول - 1.0)</option>
+                            <option value="0.0">F (راسب - 0.0)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="buttons">
+                <button type="button" class="btn-add" onclick="addCourse()">+ إضافة مادة</button>
+                <button type="submit" class="btn-submit">🎯 حساب المعدل</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
